@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/wp2409819.jpg"); 
+    min-height: 100vh;
+    background-size: 110vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display: none;
+    position:fixed;
+    width:30%;
+    top:200px;
+    left:500px;
+    padding:4rem;
+    height:200px;
+    z-index:100;
+    background-color:white;
+}
+.modal__title{
+    text-align:center;
+    font-weight:bold;
+    font-size:4rem;
+    color:red;
+}
+.modal__action{
+    background-color: blue;
+    color:white;
+    padding: 2rem;
+    outline:none;
+    border: 3px solid blue;
+    margin: 3rem 11rem;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.modal__action:hover,
+.modal__action:active{
+    color:blue;
+    background-color:white;
+}
+
+.backdrop{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.9)
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+}
+
+#board{
+    background-color:black;
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: rgb(7, 233, 7);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: rgb(153, 248, 11);
+    border: .25vmin solid rgb(153, 248, 11);
+}
+
+.food{
+    background: red;
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
